@@ -1,0 +1,4 @@
+https://siliconlabs.force.com/community/s/article/cp210x-driver-in-the-linux-kernel?language=en_US
+
+driver: cp210x.c
+/usr/lib/modules/5.16.15-arch1-1/kernel/drivers/usb/serial/cp210x.ko.zst
