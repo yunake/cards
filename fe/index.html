@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 960px;
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            font-family: montserrat, sans-serif;
+        }
+
+        #menu {
+            display: flex;
+            align-items: center;
+            background-color: #173b34;
+            height: 73px;
+            width: 100%;
+            padding: 7px 0;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            cursor: default;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            height: 51px;
+            margin-right: 16px;
+            cursor: pointer;
+        }
+
+        .logo {
+            width: 46px;
+            height: 51px;
+        }
+
+        .logo img {
+            width: inherit;
+        }
+
+        .mil-name {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .number {
+           font-size: 20px;
+        }
+
+        main {
+            background-color: #eaeae8;
+            padding: 34px 0;
+            height: 100vh;
+        }
+
+        .card {
+            display: flex;
+            width: inherit;
+            margin: 0 auto;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.26);
+        }
+
+        .photo-container {
+            display: flex;
+            width: 50%;
+            background-color: #f4ce50;
+        }
+
+        #photo {
+            display: flex;
+            width: 100%;
+            margin: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #photo-img {
+            width: inherit;
+        }
+
+        .loading {
+            /* background-color: #eaeae8; */
+            opacity: 0.4;
+        }
+
+        .fa.fa-camera {
+            margin: 0 auto;
+            padding: auto 0;
+            font-size: 156px;
+            /* color: #245a4f; */
+        }
+
+        .fa.fa-circle-o-notch {
+            font-size: 24px;
+            color: #245a4f;
+        }
+
+        label {
+            color: rgb(203, 208, 203);
+            /* color: rgb(63, 118, 82); */
+            font-weight: 700;
+        }
+
+        .info {
+            width: 50%;
+        }
+
+        .devision {
+            padding: 16px;
+            background-color: #173b34;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: end;
+            text-transform: uppercase;
+        }
+
+        .main-info {
+            padding: 34px;
+        }
+
+        .field-section {
+            padding-bottom: 24px; 
+        }
+
+        .field {
+            width: 100%;
+            padding: 15px;
+            margin-top: 8px;
+            background-color: #e1e7e2;
+            border-radius: 10px;
+            font-weight: 700;
+            /* text-transform: uppercase; */
+            text-transform: capitalize;
+        }
+
+
+    </style>
+</head>
+<body>
+    <header id="menu">
+        <div class="container">
+            <div class="logo-container">
+                <a href="https://www.125tro.lviv.ua/" class="logo"><img src="images/emblem.webp"></a>
+            </div>
+            <div class="mil-name">
+                <p class="number">125</p>
+                <p>БРИГАДА ТРО</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="card">
+                <div class="photo-container">
+
+                    <div id="photo">
+                        <img id="photo-img" alt="photo" style="display: none;">
+                        <i id="photo-loading" class="fa fa-camera loading" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="devision">тро бригада №125</div>
+                    <div class="main-info">
+                         <div class="field-section">
+                            <label for="name">Ім'я</label>
+                            <div id="name" class="field">
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
+                            </div>
+                        </div>
+                        <div class="field-section">
+                            <label for="fathername">По-батькові</label>
+                            <div id="fathername" class="field">
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
+                            </div>
+                        </div>
+                        <div class="field-section">
+                            <label for="surname">Прізвище</label>
+                            <div id="surname" class="field">
+                                <i class="fa fa-circle-o-notch fa-spin"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-spinner-third"></i>
+                </div>
+            </section>
+        </div>       
+    </main>
+
+
+    <script>
+        // let apiUrl = window.location.href.split('/').pop(); // take the current page url
+
+        // let url = 'http://www.218battalion.org/p/akjs4kjqbdnaisoei4oq2049rsd778'; // for instance
+
+        // let name = document.getElementById('name');
+        // let surname = document.getElementById('surname');
+        // let fathername = document.getElementById('fathername');
+
+        // let photoImg = document.getElementById('photo-img');
+        // let cameraIcon = document.getElementById('photo-loading');
+
+
+        // let xhttp = new XMLHttpRequest();
+
+        // xhttp.onreadystatechange = function() {
+        //     if (this.readyState == 4 && this.status == 200) {
+
+            // photoImg.style.display = 'block';
+            // cameraIcon.style.display = 'none';
+            //  photoImg.src = xhttp.responseText.photoSrc;
+
+        //     
+        // Typical action to be performed when the document is ready:
+        // if we get all separate values in the object:
+
+        //     name.innerHTML = xhttp.responseText.name;
+        //     fathername.innerHTML = xhttp.responseText.fathername;
+        //     surname.innerHTML = xhttp.responseText.surname;
+
+
+        // if Name is one string in the response object:
+
+        //     let fullNameArr = xhttp.responseText.name.split(' ');
+            
+        //     name.innerHTML = fullNameArr[0];
+        //     fathername.innerHTML = fullNameArr[1];
+        //     surname.innerHTML = fullNameArr[2];
+        //     }
+            
+        // };
+        // xhttp.open("GET", url, true);
+        // xhttp.send();
+    </script>
+    
+</body>
+</html>
